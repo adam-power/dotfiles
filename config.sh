@@ -18,3 +18,7 @@ link_file "${PWD}/vim/.vimrc" "${HOME}/.vimrc"
 
 # Tmux
 link_file "${PWD}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
+
+# Alacritty
+mkdir -p "${HOME}/.config/alacritty"
+link_file "${PWD}/alacritty/alacritty.yml" "${HOME}/.config/alacritty"
