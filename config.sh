@@ -2,10 +2,19 @@
 
 set -euo pipefail
 
-set -x
+function link_file {
+  local target="$1"
+  local link_name="$2"
+
+  if [ ! -f "$link_name" ]; then
+    ln -s "$target" "$link_name"
+  else
+    echo "${link_name} exists, doing nothing."
+  fi
+}
 
 # Vim
-ln -s "${PWD}/vim/.vimrc" "${HOME}/.vimrc"
+link_file "${PWD}/vim/.vimrc" "${HOME}/.vimrc"
 
 # Tmux
-ln -s "${PWD}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
+link_file "${PWD}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
