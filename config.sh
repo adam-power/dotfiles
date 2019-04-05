@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+script_dir="$(cd `dirname "$0"`; pwd -P)"
+
 function link_file {
   local target="$1"
   local link_name="$2"
@@ -14,11 +16,11 @@ function link_file {
 }
 
 # Vim
-link_file "${PWD}/vim/.vimrc" "${HOME}/.vimrc"
+link_file "${script_dir}/vim/.vimrc" "${HOME}/.vimrc"
 
 # Tmux
-link_file "${PWD}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
+link_file "${script_dir}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
 
 # Alacritty
 mkdir -p "${HOME}/.config/alacritty"
-link_file "${PWD}/alacritty/alacritty.yml" "${HOME}/.config/alacritty"
+link_file "${script_dir}/alacritty/alacritty.yml" "${HOME}/.config/alacritty/alacritty.yml"
