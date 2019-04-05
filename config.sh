@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-script_dir="$(cd `dirname "$0"`; pwd -P)"
+script_dir="$(cd "$(dirname "$0")"; pwd -P)"
 
-function link_file {
+link_file() {
   local target="$1"
   local link_name="$2"
 
