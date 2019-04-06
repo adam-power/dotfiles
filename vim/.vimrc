@@ -15,6 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins go here
 Plugin 'tmux-plugins/vim-tmux' " https://github.com/tmux-plugins/vim-tmux
+Plugin 'tpope/vim-commentary' " https://vimawesome.com/plugin/commentary-vim
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
