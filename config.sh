@@ -25,11 +25,15 @@ link_file() {
   fi
 }
 
+
 # Vim
 link_file "${script_dir}/vim/.vimrc" "${HOME}/.vimrc"
 
+
 # Tmux
+"${script_dir}/tmux/config.sh"
 link_file "${script_dir}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
+
 
 # Alacritty
 mkdir -p "${HOME}/.config/alacritty"
