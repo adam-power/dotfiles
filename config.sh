@@ -27,6 +27,7 @@ link_file() {
 
 
 # Vim
+"${script_dir}/vim/config.sh"
 link_file "${script_dir}/vim/.vimrc" "${HOME}/.vimrc"
 
 
