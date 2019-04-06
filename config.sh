@@ -11,9 +11,10 @@ link_file() {
   local link_name="$2"
 
   # shellcheck disable=SC2039
-  local current_target="$(readlink "$link_name")"
+  local current_target
+  current_target="$(readlink "$link_name")"
 
-  if [ "$current_target" == "" ]; then
+  if [ "$current_target" = "" ]; then
     ln -s "$target" "$link_name"
   elif [ "$current_target" != "$target" ]; then
     echo "${link_name} currently links to: ${current_target}"
