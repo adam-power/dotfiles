@@ -5,11 +5,20 @@ set -euo pipefail
 script_dir="$(cd "$(dirname "$0")"; pwd -P)"
 
 link_file() {
+  # shellcheck disable=SC2039
   local target="$1"
+  # shellcheck disable=SC2039
   local link_name="$2"
 
-  if [ ! -f "$link_name" ]; then
+  # shellcheck disable=SC2039
+  local current_target="$(readlink "$link_name")"
+
+  if [ "$current_target" == "" ]; then
     ln -s "$target" "$link_name"
+  elif [ "$current_target" != "$target" ]; then
+    echo "${link_name} currently links to: ${current_target}"
+    echo "New link target will be: ${target}"
+    ln -is "$target" "$link_name"
   else
     echo "${link_name} exists, doing nothing."
   fi
