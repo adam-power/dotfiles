@@ -65,6 +65,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   tmux
+  vi-mode
 )
 
 # Tmux plugin options
