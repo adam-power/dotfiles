@@ -12,7 +12,9 @@ link_file() {
 
   # shellcheck disable=SC2039
   local current_target
+  set +e
   current_target="$(readlink "$link_name")"
+  set -e
 
   if [ "$current_target" = "" ]; then
     ln -s "$target" "$link_name"
@@ -39,3 +41,7 @@ link_file "${script_dir}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
 # Alacritty
 mkdir -p "${HOME}/.config/alacritty"
 link_file "${script_dir}/alacritty/alacritty.yml" "${HOME}/.config/alacritty/alacritty.yml"
+
+
+# Zsh
+link_file "${script_dir}/zsh/.zshrc" "${HOME}/.zshrc"
