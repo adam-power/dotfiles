@@ -29,6 +29,7 @@ Plugin 'dracula/vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'fatih/vim-go'
+Plugin 'stephpy/vim-yaml'
 Plugin 'tmux-plugins/vim-tmux' " https://github.com/tmux-plugins/vim-tmux
 
 " All of your Plugins must be added before the following line
