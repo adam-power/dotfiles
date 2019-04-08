@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd/mm/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -63,17 +63,15 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   tmux
   vi-mode
 )
 
-# Tmux plugin options
-# See: https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/tmux
-export ZSH_TMUX_AUTOSTART="true"
-export ZSH_TMUX_AUTOCONNECT="true"
-export ZSH_TMUX_AUTOQUIT="false"
-export ZSH_TMUX_FIXTERM="true"
+# tmux plugin options
+# see: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#tmux
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOCONNECT="true"
+ZSH_TMUX_AUTOQUIT="false"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,4 +82,4 @@ alias ll='ls -lph'
 export GOPATH=${HOME}/go
 export PATH=${PATH}:${GOPATH}/bin
 
-export EDITOR=vim
+export EDITOR="$(which vim)"
