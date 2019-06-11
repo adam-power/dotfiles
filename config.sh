@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -euo pipefail
+set -eu
 
 script_dir="$(cd "$(dirname "$0")"; pwd -P)"
 
