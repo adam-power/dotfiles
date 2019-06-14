@@ -31,6 +31,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'fatih/vim-go'
 Plugin 'stephpy/vim-yaml'
 Plugin 'tmux-plugins/vim-tmux' " https://github.com/tmux-plugins/vim-tmux
+Plugin 'yggdroot/indentline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
