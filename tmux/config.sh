@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eu
+
 tmux_plugins_dir="${HOME}/.tmux/plugins/tpm"
 
 echo "Tmux additional config..."

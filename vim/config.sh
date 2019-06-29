@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eu
+
 vim_plugins_dir="${HOME}/.vim/bundle/Vundle.vim"
 
 echo "Vim additional config..."
