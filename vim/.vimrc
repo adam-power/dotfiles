@@ -32,6 +32,7 @@ Plugin 'fatih/vim-go'
 Plugin 'stephpy/vim-yaml'
 Plugin 'tmux-plugins/vim-tmux' " https://github.com/tmux-plugins/vim-tmux
 Plugin 'yggdroot/indentline'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -121,3 +122,13 @@ let g:vim_markdown_conceal_code_blocks = 0
 
 " Highlight search results
 set hlsearch
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
