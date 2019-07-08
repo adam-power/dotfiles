@@ -94,7 +94,6 @@ set number
 set numberwidth=1
 
 " Colorscheme settings
-syntax on
 colorscheme palenight
 
 " NERDTree settings (scrooloose/nerdtree)
