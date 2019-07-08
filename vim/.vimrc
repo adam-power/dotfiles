@@ -102,7 +102,7 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 let NERDTreeShowHidden=1
 " autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-n> :NERDTreeToggle<CR>
+map <C-e> :NERDTreeToggle<CR>
 
 " Set tab behavior to insert 2 spaces
 set tabstop=2
@@ -132,3 +132,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Navigation shortcuts
+map <C-n> :bn<CR>
+map <C-p> :bp<CR>
