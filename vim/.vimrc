@@ -33,6 +33,7 @@ Plugin 'stephpy/vim-yaml'
 Plugin 'tmux-plugins/vim-tmux' " https://github.com/tmux-plugins/vim-tmux
 Plugin 'yggdroot/indentline'
 Plugin 'scrooloose/syntastic'
+Plugin 'hashivim/vim-terraform'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -103,6 +104,9 @@ let NERDTreeShowHidden=1
 " autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-e> :NERDTreeToggle<CR>
+
+" Terraform plugin options
+let g:terraform_fmt_on_save=1
 
 " Set tab behavior to insert 2 spaces
 set tabstop=2
