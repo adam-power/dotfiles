@@ -34,6 +34,7 @@ Plugin 'tmux-plugins/vim-tmux' " https://github.com/tmux-plugins/vim-tmux
 Plugin 'yggdroot/indentline'
 Plugin 'scrooloose/syntastic'
 Plugin 'hashivim/vim-terraform'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -85,8 +86,6 @@ syntax on
 set t_Co=256
 let g:airline_powerline_fonts=1
 set encoding=utf-8
-" let g:airline_theme='distinguished'
-let g:airline_theme='onedark'
 set ttimeoutlen=50
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
@@ -96,7 +95,11 @@ set number
 set numberwidth=1
 
 " Colorscheme settings
-colorscheme palenight
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+colorscheme base16-material-palenight
 
 " NERDTree settings (scrooloose/nerdtree)
 let g:NERDTreeNodeDelimiter = "\u00a0"
