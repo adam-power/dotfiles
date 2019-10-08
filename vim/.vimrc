@@ -35,6 +35,7 @@ Plugin 'yggdroot/indentline'
 Plugin 'scrooloose/syntastic'
 Plugin 'hashivim/vim-terraform'
 Plugin 'chriskempson/base16-vim'
+Plugin 'NLKNguyen/papercolor-theme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -95,6 +96,9 @@ set number
 set numberwidth=1
 
 " Colorscheme settings
+" set background=light
+" colorscheme PaperColor
+
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
