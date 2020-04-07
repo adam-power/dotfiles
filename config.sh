@@ -44,4 +44,5 @@ link_file "${script_dir}/alacritty/alacritty.yml" "${HOME}/.config/alacritty/ala
 
 
 # Zsh
+"${script_dir}/zsh/config.sh"
 link_file "${script_dir}/zsh/.zshrc" "${HOME}/.zshrc"
