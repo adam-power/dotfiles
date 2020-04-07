@@ -25,6 +25,20 @@ case "$os" in
   fi
   ;;
 
+"Linux")
+  if command -v apt-get > /dev/null ; then
+    echo "Ubuntu"
+    sudo apt-get install xsel
+  elif command -v yum > /dev/null ; then
+    echo "RHEL"
+    sudo yum install xsel
+  else
+    echo "Unknown Linux distribution."
+    echo "You'll need to manually install dependencies for tmux-yank plugin."
+    echo "See the Github page for more info: https://github.com/tmux-plugins/tmux-yank"
+  fi
+  ;;
+
 *)
   echo "Unsupported OS: \"${os}\"."
   echo "You'll need to manually install dependencies for tmux-yank plugin."
