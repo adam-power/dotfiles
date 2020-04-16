@@ -12,4 +12,4 @@ CRUNCH_GIT_DIRTY_COLOR="%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="$CRUNCH_GIT_CLEAN_COLOR%B✓%b"
 ZSH_THEME_GIT_PROMPT_DIRTY="$CRUNCH_GIT_DIRTY_COLOR%B✗%b"
 
-PROMPT='%T %{$fg[cyan]%}[%c% ]$(git_prompt_info)%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
+PROMPT='%{$fg[green]%}%n@%m %{$fg[cyan]%}[%c% ]$(git_prompt_info)%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
