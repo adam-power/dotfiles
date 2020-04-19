@@ -13,4 +13,4 @@ else
   git clone https://github.com/VundleVim/Vundle.vim.git "$vim_plugins_dir"
 fi
 
-vim +PluginInstall +qall
+vim -c 'PluginInstall' -c 'qa!'
