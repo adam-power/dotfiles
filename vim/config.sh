@@ -13,4 +13,6 @@ else
   git clone https://github.com/VundleVim/Vundle.vim.git "$vim_plugins_dir"
 fi
 
-vim -c 'PluginInstall' -c 'qa!'
+set +e
+vim -E -s -c 'PluginInstall' -c 'qa!'
+echo "Vim plugins updated"
