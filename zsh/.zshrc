@@ -75,18 +75,14 @@ ZSH_TMUX_AUTOQUIT="false"
 
 source $ZSH/oh-my-zsh.sh
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-base16_material-palenight
-
 # User configuration
 alias ll='ls -lpha'
 
-# Go variables
-export GOPATH=${HOME}/go
-export PATH=${PATH}:${GOPATH}/bin
-
 export EDITOR="$(which vim)"
+
+# Source additional configs
+# This is meant for things that are system-specific
+# or should not be committed into Git.
+if [ -d "${HOME}/.config/zsh-local" ]; then
+  source ${HOME}/.config/zsh-local/*
+fi
