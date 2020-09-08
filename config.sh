@@ -30,14 +30,14 @@ link_file() {
 
 # Vim
 "${script_dir}/vim/config.sh"
-link_file "${script_dir}/vim/.vimrc" "${HOME}/.vimrc"
+link_file "${script_dir}/vim/vimrc" "${HOME}/.vimrc"
 
 
 # Tmux
 "${script_dir}/tmux/config.sh"
-link_file "${script_dir}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
+link_file "${script_dir}/tmux/tmux.conf" "${HOME}/.tmux.conf"
 
 
 # Zsh
 "${script_dir}/zsh/config.sh"
-link_file "${script_dir}/zsh/.zshrc" "${HOME}/.zshrc"
+link_file "${script_dir}/zsh/zshrc" "${HOME}/.zshrc"
