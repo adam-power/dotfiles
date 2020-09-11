@@ -41,3 +41,4 @@ link_file "${script_dir}/tmux/tmux.conf" "${HOME}/.tmux.conf"
 # Zsh
 "${script_dir}/zsh/config.sh"
 link_file "${script_dir}/zsh/zshrc" "${HOME}/.zshrc"
+link_file "${script_dir}/zsh/adam.zsh-theme" "${HOME}/.oh-my-zsh/custom/themes/adam.zsh-theme"
