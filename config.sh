@@ -33,7 +33,7 @@ link_file() {
 link_file "${script_dir}/vim/vimrc" "${HOME}/.vimrc"
 
 
-# NeoVim
+# Neovim
 "${script_dir}/nvim/config.sh"
 mkdir -p "${HOME}/.config/nvim"
 link_file "${script_dir}/nvim/init.vim" "${HOME}/.config/nvim/init.vim"
