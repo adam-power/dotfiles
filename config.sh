@@ -33,6 +33,12 @@ link_file() {
 link_file "${script_dir}/vim/vimrc" "${HOME}/.vimrc"
 
 
+# NeoVim
+"${script_dir}/nvim/config.sh"
+mkdir -p "${HOME}/.config/nvim"
+link_file "${script_dir}/nvim/init.vim" "${HOME}/.config/nvim/init.vim"
+
+
 # Tmux
 "${script_dir}/tmux/config.sh"
 link_file "${script_dir}/tmux/tmux.conf" "${HOME}/.tmux.conf"
