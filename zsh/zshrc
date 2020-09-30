@@ -78,7 +78,12 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 alias ll='ls -lpha'
 
-export EDITOR="$(which vim)"
+if command -v nvim > /dev/null; then
+  export EDITOR="$(which nvim)"
+  alias vim='nvim'
+else
+  export EDITOR="$(which vim)"
+fi
 
 # Source additional configs
 # This is meant for things that are system-specific
