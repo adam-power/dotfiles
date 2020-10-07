@@ -10,6 +10,9 @@ Plug 'yggdroot/indentline' " show indentation levels
 Plug 'vim-airline/vim-airline' " status line
 Plug 'vim-airline/vim-airline-themes' " themes for airline
 
+" Language-specific plugins
+Plug 'scrooloose/syntastic' " shellcheck
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -44,6 +47,17 @@ map <C-e> :NERDTreeToggle<CR>
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+map <C-t> :SyntasticToggleMode<CR>
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Navigation shortcuts
 map <C-n> :bn<CR>
