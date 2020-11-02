@@ -48,3 +48,12 @@ link_file "${script_dir}/tmux/tmux.conf" "${HOME}/.tmux.conf"
 "${script_dir}/zsh/config.sh"
 link_file "${script_dir}/zsh/zshrc" "${HOME}/.zshrc"
 link_file "${script_dir}/zsh/adam.zsh-theme" "${HOME}/.oh-my-zsh/custom/themes/adam.zsh-theme"
+case "$(hostname)" in
+  "apower-a01.vmware.com")
+    echo "Additional ZSH config for work laptop..."
+    link_file "${script_dir}/zsh/macbook.zsh" "${HOME}/.config/zsh-local/macbook.zsh"
+    ;;
+  *)
+    echo "Unrecognized machine, skipping additional ZSH config..."
+    ;;
+esac
