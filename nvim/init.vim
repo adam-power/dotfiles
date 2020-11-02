@@ -14,6 +14,7 @@ Plug 'vim-airline/vim-airline-themes' " themes for airline
 Plug 'scrooloose/syntastic'   " Shellcheck
 Plug 'hashivim/vim-terraform' " Terraform
 Plug 'fatih/vim-go'           " Go
+Plug 'elzr/vim-json'          " JSON - required to fix indentLine bug
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -49,6 +50,10 @@ map <C-e> :NERDTreeToggle<CR>
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Fix JSON display
+" See here for more info: https://github.com/Yggdroot/indentLine/issues/140
+let g:vim_json_syntax_conceal = 0
 
 " Syntastic settings
 set statusline+=%#warningmsg#
