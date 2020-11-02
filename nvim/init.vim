@@ -11,8 +11,9 @@ Plug 'vim-airline/vim-airline' " status line
 Plug 'vim-airline/vim-airline-themes' " themes for airline
 
 " Language-specific plugins
-Plug 'scrooloose/syntastic' " Shellcheck
+Plug 'scrooloose/syntastic'   " Shellcheck
 Plug 'hashivim/vim-terraform' " Terraform
+Plug 'fatih/vim-go'           " Go
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
