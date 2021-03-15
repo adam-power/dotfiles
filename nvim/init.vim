@@ -11,10 +11,11 @@ Plug 'vim-airline/vim-airline' " status line
 Plug 'vim-airline/vim-airline-themes' " themes for airline
 
 " Language-specific plugins
-Plug 'scrooloose/syntastic'   " Shellcheck
-Plug 'hashivim/vim-terraform' " Terraform
-Plug 'fatih/vim-go'           " Go
-Plug 'elzr/vim-json'          " JSON - required to fix indentLine bug
+Plug 'scrooloose/syntastic'    " Shellcheck
+Plug 'hashivim/vim-terraform'  " Terraform
+Plug 'fatih/vim-go'            " Go
+Plug 'elzr/vim-json'           " JSON - required to fix indentLine bug
+Plug 'plasticboy/vim-markdown' " Markdown - required to fix indentLine conceal issues
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -54,6 +55,11 @@ set expandtab
 " Fix JSON display
 " See here for more info: https://github.com/Yggdroot/indentLine/issues/140
 let g:vim_json_syntax_conceal = 0
+
+" Options for vim-markdown plugin
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
 
 " Syntastic settings
 set statusline+=%#warningmsg#
