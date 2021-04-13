@@ -19,3 +19,9 @@ export PATH="$HOME/bin:$PATH"
 # Adding || true because this exits with a non-zero code due to a bug
 # See: https://github.com/kubernetes/kubernetes/pull/88165
 source <(kubectl completion zsh) || true
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/apower/.local/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/apower/.local/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/apower/.local/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/apower/.local/google-cloud-sdk/completion.zsh.inc'; fi
