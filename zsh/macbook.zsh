@@ -25,3 +25,7 @@ if [ -f '/Users/apower/.local/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/a
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/apower/.local/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/apower/.local/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Minio stuff
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/mc mc
